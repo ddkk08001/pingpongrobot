@@ -54,3 +54,5 @@ while True:
             pass
         elif color == Color.WHITE:
             base_motor.run(-100)
+    
+    #여기부터 작업
