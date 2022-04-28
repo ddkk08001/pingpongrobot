@@ -1,4 +1,6 @@
 #!/usr/bin/env pybricks-micropython
+import re
+from turtle import color
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
                                  InfraredSensor, UltrasonicSensor, GyroSensor)
@@ -25,7 +27,7 @@ base_motor = Motor(Port.A, Direction.COUNTERCLOCKWISE, [8, 40])
 second_motor = Motor(Port.B, Direction.COUNTERCLOCKWISE, [8, 40])
 
 #Initialize sensor
-base_switch = ColorSensor(Port.S1)
+base_sensor = ColorSensor(Port.S1)
 
 # Write your program here.
 
@@ -35,3 +37,20 @@ while True:
 
     while len(color_list) < 8:
         base_motor.run(-100)
+
+        color_list.append(color)
+
+        while base_sensor.color() in POSSIBLE_COLORS:
+            pass
+    
+    for color in color_list:
+        if color == Color.RED:
+            pass
+        elif color == Color.BLUE:
+            pass
+        elif color == Color.GREEN:
+            pass
+        elif color == Color.YELLOW:
+            pass
+        elif color == Color.WHITE:
+            base_motor.run(-100)
