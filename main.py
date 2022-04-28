@@ -15,6 +15,11 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 # Create your objects here.
 ev3 = EV3Brick()
 
+POSSIBLE_COLORS = (Color)
+
+base_motor = Motor(Port.A, Direction.COUNTERCLOCKWISE, [8, 40])
+base_switch = Sensor(Port.S1)
 
 # Write your program here.
-ev3.speaker.beep()
+while base_switch(Color.Reflect)
+    ###여기서부터 작업
