@@ -1,4 +1,5 @@
 #!/usr/bin/env pybricks-micropython
+from os import wait3
 import re
 from turtle import color
 from pybricks.hubs import EV3Brick
@@ -55,4 +56,4 @@ while True:
         elif color == Color.WHITE:
             base_motor.run(-100)
     
-    #여기부터 작업
+    
