@@ -56,4 +56,8 @@ while True:
         elif color == Color.WHITE:
             base_motor.run(-100)
     
+    while base_motor.run:
+      wait 1
+      second_motor.run(-100)
+      
     
